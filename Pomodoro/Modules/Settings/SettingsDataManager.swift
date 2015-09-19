@@ -27,12 +27,18 @@ class SettingsDataManager : NSObject {
         completion( [ minutes, seconds ] )
     }
     
-    func storeValues(values: [Int], completion: (Void -> Void)!) {
+    func storeValues(values: [Int], completion: (Bool -> Void)!) {
         if (values.count == 2) {
-            self.storage.minutes = values[0]
-            self.storage.seconds = values[1]
+            if (values[1] < 60) {
+                self.storage.minutes = values[0]
+                self.storage.seconds = values[1]
+                completion(true)
+            } else {
+                completion(false)
+            }
+        } else {
+            completion(false)
         }
-        completion()
     }
     
 }

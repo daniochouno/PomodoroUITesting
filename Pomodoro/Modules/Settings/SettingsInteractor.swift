@@ -15,7 +15,7 @@ protocol SettingsInteractorInput {
 
 protocol SettingsInteractorOutput {
     func currentValuesRetrieved(values: [Int])
-    func storedValues()
+    func storedValues(isOK: Bool)
 }
 
 class SettingsInteractor: NSObject, SettingsInteractorInput {
@@ -35,8 +35,8 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
     }
     
     func storeValues(values: [Int]) {
-        dataManager.storeValues(values, completion: { values in
-            self.output?.storedValues()
+        dataManager.storeValues(values, completion: { isOK in
+            self.output?.storedValues(isOK)
         } )
     }
 

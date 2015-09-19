@@ -40,8 +40,13 @@ class SettingsViewController: UIViewController, SettingsInteractorOutput {
         interactor.storeValues( [ _minutes!, _seconds! ] )
     }
     
-    func storedValues() {
-        pop()
+    func storedValues(isOK: Bool) {
+        if isOK {
+            self.navigationItem.title = "Edit"
+            pop()
+        } else {
+            self.navigationItem.title = "Error!"
+        }
     }
     
     func pop() {
