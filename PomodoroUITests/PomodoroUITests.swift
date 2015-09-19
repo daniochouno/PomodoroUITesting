@@ -108,5 +108,33 @@ class PomodoroUITests: XCTestCase {
         
     }
     
+    func testSecondsGreaterThanOrEqual60() {
+        
+        let app = XCUIApplication()
+        
+        // Press "Set Timer" button:
+        app.navigationBars["Pomodoro"].buttons["Set Timer"].tap()
+        
+        let error = app.staticTexts["Error!"]
+        
+        // Error message not exists:
+        XCTAssertFalse( error.exists )
+        
+        // Remove all text in TextField:
+        let secondsTextField = app.textFields.elementBoundByIndex(1)
+        secondsTextField.tap()
+        while (( secondsTextField.value as! String ).characters.count > 0) {
+            secondsTextField.typeText(XCUIKeyboardKeyDelete)
+        }
+        // Set seconds to "90":
+        secondsTextField.typeText("90")
+        
+        // Press "Save" button:
+        app.navigationBars["Edit"].buttons["Save"].tap()
+        
+        // Error message exists:
+        XCTAssert( error.enabled )
+        
+    }
     
 }
