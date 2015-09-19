@@ -43,4 +43,44 @@ class PomodoroUITests: XCTestCase {
         
     }
     
+    func testUpdateCountdown() {
+        
+        let app = XCUIApplication()
+        
+        // Press "Set Timer" button:
+        app.navigationBars["Pomodoro"].buttons["Set Timer"].tap()
+        
+        // Remove all text in TextField:
+        let minutesTextField = app.textFields.elementBoundByIndex(0)
+        minutesTextField.tap()
+        while (( minutesTextField.value as! String ).characters.count > 0) {
+            minutesTextField.typeText(XCUIKeyboardKeyDelete)
+        }
+        
+        // Set minutes to "0":
+        minutesTextField.typeText("0")
+        
+        // Remove all text in TextField:
+        let secondsTextField = app.textFields.elementBoundByIndex(1)
+        secondsTextField.tap()
+        while (( secondsTextField.value as! String ).characters.count > 0) {
+            secondsTextField.typeText(XCUIKeyboardKeyDelete)
+        }
+        // Set seconds to "20":
+        secondsTextField.typeText("20")
+        
+        // Press "Save" button:
+        app.navigationBars["Edit"].buttons["Save"].tap()
+        
+        // We are on the first screen:
+        XCTAssertNotNil( app.navigationBars["Pomodoro"] )
+        
+        // Exists a label with "00" text:
+        XCTAssertNotNil( app.staticTexts["00"] )
+        
+        // Exists a label with "20" text:
+        XCTAssertNotNil( app.staticTexts["20"] )
+        
+    }
+    
 }
