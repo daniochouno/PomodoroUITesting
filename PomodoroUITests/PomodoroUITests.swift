@@ -83,4 +83,30 @@ class PomodoroUITests: XCTestCase {
         
     }
     
+    func testTapInsideCounter() {
+        
+        let app = XCUIApplication()
+        
+        let start = app.staticTexts["start"]
+        let reset = app.staticTexts["reset"]
+        
+        // Exists a label with "start" text:
+        XCTAssert( start.exists )
+        
+        // Not exists a label with "reset" text:
+        XCTAssertFalse( reset.exists )
+        
+        // UIStackView is not an accessible element.
+        // We must tap an element inside UIStackView to simulate tap on it.
+        app.staticTexts["02"].tap()
+        
+        // Not exists a label with "start" text:
+        XCTAssertFalse( start.exists )
+        
+        // Exists a label with "reset" text:
+        XCTAssert( reset.exists )
+        
+    }
+    
+    
 }
