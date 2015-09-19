@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iCH-N5-W5q">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pomodoro-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TimerViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Ef-ZW-NIN" userLabel="InfoStackView">
+                                <rect key="frame" x="203" y="212" width="195" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap inside the counter to " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1u-Jo-B7q">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="18"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyV-HR-1Lu" userLabel="ActionName">
+                                        <rect key="frame" x="163" y="0.0" width="32" height="18"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V50-hZ-hTA" userLabel="CounterStackView">
+                                <rect key="frame" x="20" y="240" width="560" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xf-MG-AT7" userLabel="Minutes">
+                                        <rect key="frame" x="0.0" y="0.0" width="266" height="120"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="100"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cs-Qa-1zG" userLabel=":">
+                                        <rect key="frame" x="266" y="0.0" width="29" height="120"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="100"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q8-cW-AXm" userLabel="Seconds">
+                                        <rect key="frame" x="295" y="0.0" width="265" height="120"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="100"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="2cs-Qa-1zG" firstAttribute="centerX" secondItem="V50-hZ-hTA" secondAttribute="centerX" id="ecz-Y8-z1s"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Kbf-cg-qA3" appends="YES" id="ZiG-5Y-FUP"/>
+                                </connections>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23137254901960785" green="0.57647058823529407" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V50-hZ-hTA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3zW-Wg-HDH"/>
+                            <constraint firstItem="V50-hZ-hTA" firstAttribute="top" secondItem="5Ef-ZW-NIN" secondAttribute="bottom" constant="10" id="DYY-0y-Lly"/>
+                            <constraint firstItem="5Ef-ZW-NIN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ofq-YC-hoN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="V50-hZ-hTA" secondAttribute="leading" id="cEx-A0-FJN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V50-hZ-hTA" secondAttribute="trailing" id="sgz-lP-4Da"/>
+                            <constraint firstItem="V50-hZ-hTA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yAe-p8-UdF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pomodoro" id="Y2f-pZ-5iw">
+                        <barButtonItem key="rightBarButtonItem" title="Set Timer" id="CWN-li-bEO">
+                            <connections>
+                                <segue destination="qPb-Pb-PZ7" kind="show" id="Eh2-r5-s3b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionName" destination="kyV-HR-1Lu" id="asO-bw-S9R"/>
+                        <outlet property="minutes" destination="7Xf-MG-AT7" id="gSF-Ms-IGu"/>
+                        <outlet property="seconds" destination="6Q8-cW-AXm" id="iN4-uX-Jo1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Kbf-cg-qA3">
+                    <connections>
+                        <action selector="tapOn:" destination="BYZ-38-t0r" id="cyv-Oz-cjd"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1057" y="305"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tux-11-d9R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iCH-N5-W5q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y9H-lh-Tia">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.78823529411764703" green="0.98431372549019602" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X5C-0v-5QE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyd-L7-qes" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="305"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="Tcq-hl-Ztr">
+            <objects>
+                <viewController id="qPb-Pb-PZ7" customClass="SettingsViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g3T-U9-JPl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fwe-LC-zDu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nIw-pp-vxP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxC-oL-GdO" userLabel="CounterStackView">
+                                <rect key="frame" x="20" y="240" width="560" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="99" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTY-ZS-AM7" userLabel="MinutesTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="266" height="120"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="100"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NH9-cW-1tW" userLabel=":">
+                                        <rect key="frame" x="266" y="0.0" width="29" height="120"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="100"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="99" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-e6-8Go" userLabel="SecondsTextField">
+                                        <rect key="frame" x="295" y="0.0" width="265" height="120"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="100"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="NH9-cW-1tW" firstAttribute="centerX" secondItem="SxC-oL-GdO" secondAttribute="centerX" id="WVu-u0-XLZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vfl-oI-7Ee" appends="YES" id="Nrk-8V-b9p"/>
+                                </connections>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23137254901960785" green="0.57647058823529407" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="SxC-oL-GdO" secondAttribute="leading" id="GEg-cb-cUL"/>
+                            <constraint firstItem="SxC-oL-GdO" firstAttribute="centerX" secondItem="nIw-pp-vxP" secondAttribute="centerX" id="Qm7-35-txh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SxC-oL-GdO" secondAttribute="trailing" id="TS2-ul-3vY"/>
+                            <constraint firstItem="SxC-oL-GdO" firstAttribute="centerY" secondItem="nIw-pp-vxP" secondAttribute="centerY" id="gwG-iW-alx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit" id="1UE-d2-wu5">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="mMj-6G-Srg" userLabel="Cancel">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="qPb-Pb-PZ7" id="6MZ-RZ-FUS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="BJG-Co-9O3">
+                            <connections>
+                                <action selector="save:" destination="qPb-Pb-PZ7" id="iSB-NT-2pg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="minutes" destination="jTY-ZS-AM7" id="5Rt-dv-3La"/>
+                        <outlet property="seconds" destination="Qbu-e6-8Go" id="fgI-9s-5zj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UrK-uC-6Dp" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vfl-oI-7Ee"/>
+            </objects>
+            <point key="canvasLocation" x="1807" y="305"/>
+        </scene>
+    </scenes>
+</document>
