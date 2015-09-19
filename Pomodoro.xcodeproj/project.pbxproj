@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10219B61BADC773005B59C4 /* PomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10219B51BADC773005B59C4 /* PomodoroUITests.swift */; };
 		C1AF33541BA7FFF400BF3213 /* PomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AF33531BA7FFF400BF3213 /* PomodoroTests.swift */; };
 		C1AF33641BA801B600BF3213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AF33621BA801B600BF3213 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		C1AF33691BA801DF00BF3213 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AF33681BA801DF00BF3213 /* TimerViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -23,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C10219B81BADC773005B59C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1AF33331BA7FFF300BF3213 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1AF333A1BA7FFF300BF3213;
+			remoteInfo = Pomodoro;
+		};
 		C1AF33501BA7FFF400BF3213 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1AF33331BA7FFF300BF3213 /* Project object */;
@@ -33,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C10219B31BADC773005B59C4 /* PomodoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10219B51BADC773005B59C4 /* PomodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroUITests.swift; sourceTree = "<group>"; };
+		C10219B71BADC773005B59C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1AF333B1BA7FFF300BF3213 /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AF334F1BA7FFF400BF3213 /* PomodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AF33531BA7FFF400BF3213 /* PomodoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTests.swift; sourceTree = "<group>"; };
@@ -53,6 +64,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C10219B01BADC773005B59C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1AF33381BA7FFF300BF3213 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,11 +88,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C10219B41BADC773005B59C4 /* PomodoroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C10219B51BADC773005B59C4 /* PomodoroUITests.swift */,
+				C10219B71BADC773005B59C4 /* Info.plist */,
+			);
+			path = PomodoroUITests;
+			sourceTree = "<group>";
+		};
 		C1AF33321BA7FFF300BF3213 = {
 			isa = PBXGroup;
 			children = (
 				C1AF333D1BA7FFF300BF3213 /* Pomodoro */,
 				C1AF33521BA7FFF400BF3213 /* PomodoroTests */,
+				C10219B41BADC773005B59C4 /* PomodoroUITests */,
 				C1AF333C1BA7FFF300BF3213 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +112,7 @@
 			children = (
 				C1AF333B1BA7FFF300BF3213 /* Pomodoro.app */,
 				C1AF334F1BA7FFF400BF3213 /* PomodoroTests.xctest */,
+				C10219B31BADC773005B59C4 /* PomodoroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +213,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C10219B21BADC773005B59C4 /* PomodoroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C10219BC1BADC773005B59C4 /* Build configuration list for PBXNativeTarget "PomodoroUITests" */;
+			buildPhases = (
+				C10219AF1BADC773005B59C4 /* Sources */,
+				C10219B01BADC773005B59C4 /* Frameworks */,
+				C10219B11BADC773005B59C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C10219B91BADC773005B59C4 /* PBXTargetDependency */,
+			);
+			name = PomodoroUITests;
+			productName = PomodoroUITests;
+			productReference = C10219B31BADC773005B59C4 /* PomodoroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C1AF333A1BA7FFF300BF3213 /* Pomodoro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1AF33581BA7FFF400BF3213 /* Build configuration list for PBXNativeTarget "Pomodoro" */;
@@ -228,6 +275,10 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = com.igz;
 				TargetAttributes = {
+					C10219B21BADC773005B59C4 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = C1AF333A1BA7FFF300BF3213;
+					};
 					C1AF333A1BA7FFF300BF3213 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -252,11 +303,19 @@
 			targets = (
 				C1AF333A1BA7FFF300BF3213 /* Pomodoro */,
 				C1AF334E1BA7FFF400BF3213 /* PomodoroTests */,
+				C10219B21BADC773005B59C4 /* PomodoroUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C10219B11BADC773005B59C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1AF33391BA7FFF300BF3213 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +336,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C10219AF1BADC773005B59C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10219B61BADC773005B59C4 /* PomodoroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1AF33371BA7FFF300BF3213 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,6 +371,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C10219B91BADC773005B59C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1AF333A1BA7FFF300BF3213 /* Pomodoro */;
+			targetProxy = C10219B81BADC773005B59C4 /* PBXContainerItemProxy */;
+		};
 		C1AF33511BA7FFF400BF3213 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C1AF333A1BA7FFF300BF3213 /* Pomodoro */;
@@ -331,6 +403,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C10219BA1BADC773005B59C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PomodoroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.igz.PomodoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Pomodoro;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C10219BB1BADC773005B59C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PomodoroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.igz.PomodoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Pomodoro;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		C1AF33561BA7FFF400BF3213 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -463,6 +559,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C10219BC1BADC773005B59C4 /* Build configuration list for PBXNativeTarget "PomodoroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10219BA1BADC773005B59C4 /* Debug */,
+				C10219BB1BADC773005B59C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C1AF33361BA7FFF300BF3213 /* Build configuration list for PBXProject "Pomodoro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
