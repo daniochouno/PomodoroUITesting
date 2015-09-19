@@ -28,9 +28,19 @@ class PomodoroUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSetTimerButtonPressed() {
+        
+        let app = XCUIApplication()
+        
+        // "Set Timer" button:
+        let button = app.navigationBars["Pomodoro"].buttons["Set Timer"]
+        
+        // Press button:
+        button.tap()
+        
+        // Button is not accessible because we are on another screen:
+        XCTAssertFalse( button.exists )
+        
     }
     
 }
